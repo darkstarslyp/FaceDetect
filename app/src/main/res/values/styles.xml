@@ -17,4 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="LeftDrawerTextStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_main</item>
+    </style>
+
 </resources>
