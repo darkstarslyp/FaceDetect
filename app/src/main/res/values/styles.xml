@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -20,6 +20,11 @@
     <style name="LeftDrawerTextStyle">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">@dimen/text_main</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:progressBarStyle">@android:style/Widget.ProgressBar.Large</item>
+        <item name="android:progressDrawable">@drawable/custom_progress_bar</item>
     </style>
 
 </resources>

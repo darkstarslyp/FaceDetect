@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/tool_bar_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_page_bg"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_height="500dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/CustomProgressBar"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                />
+
+            <Button
+                android:id="@+id/btn_start_to_detect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/normal_button_bg"
+                android:text="@string/btn_start_to_detect"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
+
+

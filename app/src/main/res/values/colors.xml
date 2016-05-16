@@ -6,4 +6,77 @@
 
     <color name="colorLeftDrawer">#ddffffff</color>
     <color name="transparent">#00000000</color>
+    <color name="main_page_bg">#EBEBEB</color>
+    <color name="normal_color_bg">#FF21272B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#e2d62a</color>
+
+    <color name="black_transparent">#80000000</color>
+
+    <color name="gray">#6c6c6c</color>
+    <color name="gray_light">#11edece8</color>
+    <color name="gray_transparent">#809c9c9c</color>
+    <color name="gray_transparent_less">#ddedece8</color>
+
+    <color name="app_main">#ce0064</color>
+
+    <color name="page_bg">#2e3138</color>
+
+    <color name="product_list_bg">#d9dcdd</color>
+
+    <color name="product_detail_nav_bg">#d2d2d2</color>
+
+
+    <color name="sdk_btn_bgcolor_main">#ce0064</color>
+    <color name="app_main_page_header">#c7e0ee</color>
+    <color name="app_main_page_list_bg_begin">#8a9eaa</color>
+    <color name="app_main_page_list_bg_end">#39454e</color>
+    <color name="app_main_page_list_bg_mid">#404d56</color>
+
+    <color name="nav_selected_not_focus">#15b8cb</color>
+
+    <color name="product_list_bg_begin">#0e161d</color>
+    <color name="product_list_bg_mid">#253845</color>
+    <color name="product_list_bg_end">#5987a1</color>
+    <color name="product_detail_bg_begin">#41464c</color>
+    <color name="product_detail_bg_end">#7ea2b8</color>
+    <color name="product_detail_bg_mid">#576975</color>
+
+    <color name="home_recycle_item_bg_line">#4c4c4c</color>
+    <color name="home_recycle_item_fore_line">#39848D</color>
+    <color name="home_bg_color">#000000</color>
+
+
+    <color name="product_buy_info_container">#494A4A</color>
+    <color name="product_instantly_have_btn_active">#fc5300</color>
+    <color name="product_instantly_have_btn">#d05300</color>
+    <color name="product_size_base_color">#dddddd</color>
+    <color name="product_size_active_color">#dddddd</color>
+
+    <color name="product_scan_buy">#c0c0c0</color>
+    <color name="qr_bg">#EE000000</color>
+    <color name="nav_bg_color">#CC444444</color>
+    <color name="nav_bar_item_focus_color">#38969E</color>
+    <color name="nav_bar_txt_default">#A7A7A7</color>
+
+    <color name="table_size_border">#393939</color>
+    <color name="table_size_border_header_bg">#787878</color>
+    <color name="product_size_bg">#D3D3D3</color>
+    <color name="size_choose_default_bg">#616161</color>
+
+    <color name="select_button_default_bg_color">#fff</color>
+    <color name="select_button_default_border_color">#fff</color>
+    <color name="select_button_shape_bg_color">#fff</color>
+    <color name="select_button_shape_color">#fff</color>
+    <color name="select_button_txt_color">#fff</color>
+    <color name="shop_fragment_bg_color">#77000000</color>
+    <color name="default_overlay_color">#AAFFFFFF</color>
+    <color name="bottom_nav_item_fore_color">#aa000000</color>
+
+    <color name="button_unuse_state">#AAA4A4</color>
+    <color name="product_detail_float_bar_color">#806c6c6c</color>
 </resources>

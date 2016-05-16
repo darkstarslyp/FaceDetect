@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/main_page_bg"
+    >
+
+    <Button
+        android:id="@+id/static_detect"
+        android:text="@string/take_picture_detect"
+        android:background="@drawable/normal_button_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        />
+    <Button
+        android:id="@+id/select_pic_detect"
+        android:text="@string/select_pic_detect"
+        android:background="@drawable/normal_button_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        />
+
+    <!--<Button-->
+        <!--android:id="@+id/create_person"-->
+        <!--android:text="@string/create_person"-->
+        <!--android:background="@drawable/normal_button_bg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--/>-->
+
+    <Button
+        android:id="@+id/banji_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/banji_info"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/normal_button_bg"
+        />
+
+    <Button
+        android:id="@+id/dynamatic_detect"
+        android:text="@string/dynamatic_detect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/normal_button_bg"
+        android:visibility="gone"
+
+        />
+</LinearLayout>
