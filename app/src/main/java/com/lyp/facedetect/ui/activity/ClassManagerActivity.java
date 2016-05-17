@@ -23,7 +23,6 @@ import com.lyp.facedetect.adapter.ClassInfoListAdapter;
 import com.lyp.facedetect.facemodel.ClassInfo;
 import com.lyp.facedetect.facemodel.ClassInfoArray;
 import com.lyp.facedetect.facemodel.JSONObjectParse;
-import com.lyp.facedetect.facemodel.StudentInfo;
 import com.lyp.facedetect.net.BasePostParameters;
 import com.lyp.facedetect.net.BaseRequestTask;
 import com.lyp.facedetect.net.RequestResultInterface;
@@ -164,16 +163,18 @@ public class ClassManagerActivity extends BaseActicity implements PullToRefreshV
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
 
-        Button mBtnDeleteClass = (Button) convertView.findViewById(R.id.btn_delete_student);
-//        Button mBtnDeleteAllFace = (Button) convertView.findViewById(R.id.btn_delete_all_face);
+        Button mBtnTrainClass = (Button) convertView.findViewById(R.id.btn_delete_student);
+        Button mBtnDeleteAllFace = (Button) convertView.findViewById(R.id.btn_delete_all_face);
         Button mBtnAddFace = (Button) convertView.findViewById(R.id.btn_add_face);
         mBtnAddFace.setVisibility(View.GONE);
+        mBtnDeleteAllFace.setVisibility(View.GONE);
+        mBtnTrainClass.setText(getResources().getString(R.string.train_class));
         final Button mBtnCancel = (Button)convertView.findViewById(R.id.btn_cancel);
 
-        mBtnDeleteClass.setOnClickListener(new View.OnClickListener() {
+        mBtnTrainClass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BasePostParameters postParameters = new BasePostParameters(BasePostParameters.PostType.Delete_Group);
+                BasePostParameters postParameters = new BasePostParameters(BasePostParameters.PostType.Train_Group);
                 postParameters.setGroupName(classInfo.group_name);
                 BaseRequestTask task = new BaseRequestTask(new RequestResultInterface() {
                     @Override
@@ -183,13 +184,13 @@ public class ClassManagerActivity extends BaseActicity implements PullToRefreshV
 
                     @Override
                     public void success(Object o) {
-                        T.toastLongWithResId(ClassManagerActivity.this,R.string.delete_success);
-                        getData();
+                        T.toastLongWithResId(ClassManagerActivity.this,R.string.train_class_success);
+
                     }
 
                     @Override
                     public void failed() {
-                        T.toastLongWithResId(ClassManagerActivity.this,R.string.delete_class_failed);
+                        T.toastLongWithResId(ClassManagerActivity.this,R.string.train_class_failed);
                     }
                 });
                 task.execute(postParameters);
@@ -209,7 +210,7 @@ public class ClassManagerActivity extends BaseActicity implements PullToRefreshV
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-        //showBottomMenu(position);
+        showBottomMenu(position);
         return true;
     }
 }

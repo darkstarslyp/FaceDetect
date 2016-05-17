@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,8 @@ import android.widget.ProgressBar;
 import com.facepp.error.FaceppParseException;
 import com.facepp.http.PostParameters;
 import com.lyp.facedetect.R;
+import com.lyp.facedetect.facemodel.FaceInfoArray;
+import com.lyp.facedetect.facemodel.JSONObjectParse;
 import com.lyp.facedetect.net.BasePostParameters;
 import com.lyp.facedetect.net.BaseRequestTask;
 import com.lyp.facedetect.net.RequestResultInterface;
@@ -139,14 +142,21 @@ public class FaceDetectActivity extends BaseActicity {
             public void success(Object o) {
                 mProgressBar.setVisibility(View.INVISIBLE);
                 JSONObject result = (JSONObject)o;
+                Log.d("result=",result.toString());
+                FaceInfoArray faceInfoArray = JSONObjectParse.getImageFaceInfoArray(result);
+                if(faceInfoArray!=null&&faceInfoArray.face!=null&&faceInfoArray.face.length>0){
+                    Log.d("face num =",faceInfoArray.face.length+"");
 
+                }else{
+                    T.toastShortWithResId(FaceDetectActivity.this,R.string.not_detect_face);
+                }
             }
 
             @Override
             public void failed() {
 
                 mProgressBar.setVisibility(View.INVISIBLE);
-                T.toastShortWithResId(FaceDetectActivity.this,R.string.error);
+                T.toastShortWithResId(FaceDetectActivity.this,R.string.image_size_to_big);
 
             }
 

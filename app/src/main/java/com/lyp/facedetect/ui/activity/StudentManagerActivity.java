@@ -182,7 +182,8 @@ public class StudentManagerActivity extends BaseActicity implements PullToRefres
         popupWindow.setFocusable(true);
 
         Button mBtnDeleteStudent = (Button) convertView.findViewById(R.id.btn_delete_student);
-        Button mBtnDeleteAllFace = (Button) convertView.findViewById(R.id.btn_delete_all_face);
+        Button mBtnTrainPerson = (Button) convertView.findViewById(R.id.btn_delete_all_face);
+        mBtnTrainPerson.setText(getResources().getString(R.string.train_person));
         Button mBtnAddFace = (Button) convertView.findViewById(R.id.btn_add_face);
         final Button mBtnCancel = (Button)convertView.findViewById(R.id.btn_cancel);
 
@@ -213,12 +214,11 @@ public class StudentManagerActivity extends BaseActicity implements PullToRefres
             }
         });
 
-        mBtnDeleteAllFace.setOnClickListener(new View.OnClickListener() {
+        mBtnTrainPerson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BasePostParameters postParameters = new BasePostParameters(BasePostParameters.PostType.Delete_Person);
+                BasePostParameters postParameters = new BasePostParameters(BasePostParameters.PostType.Train_Person);
                 postParameters.setPersonName(studentInfo.person_name);
-                postParameters.setFaceId("all");
                 BaseRequestTask task = new BaseRequestTask(new RequestResultInterface() {
                     @Override
                     public void start() {
@@ -227,12 +227,12 @@ public class StudentManagerActivity extends BaseActicity implements PullToRefres
 
                     @Override
                     public void success(Object o) {
-                        T.toastLongWithResId(StudentManagerActivity.this,R.string.delete_success);
+                        T.toastLongWithResId(StudentManagerActivity.this,R.string.train_student_success);
                     }
 
                     @Override
                     public void failed() {
-                        T.toastLongWithResId(StudentManagerActivity.this,R.string.delete_student_all_face_failed);
+                        T.toastLongWithResId(StudentManagerActivity.this,R.string.train_student_failed);
                     }
                 });
                 task.execute(postParameters);

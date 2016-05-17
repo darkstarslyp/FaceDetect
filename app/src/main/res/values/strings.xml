@@ -46,4 +46,12 @@
     <string name="add_student_image_success">添加学生Face成功</string>
     <string name="detect_error">识别错误</string>
     <string name="face_num">Face数量：</string>
+    <string name="train_person">Train Student</string>
+    <string name="train_class">Train Class</string>
+    <string name="train_class_success">Train Class Success</string>
+    <string name="train_class_failed">Train Class Failed</string>
+    <string name="train_student_failed">Train Student Failed</string>
+    <string name="train_student_success">Train Student Success</string>
+    <string name="not_detect_face">未检测到人脸信息</string>
+    <string name="image_size_to_big">照片尺寸过大</string>
 </resources>

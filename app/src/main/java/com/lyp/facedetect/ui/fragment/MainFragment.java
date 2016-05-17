@@ -91,10 +91,17 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
 
             switch (requestCode) {
                 case AppDefine.CODE_REQUEST_CAMERA:
+//                    if(resultCode==BaseActicity.RESULT_OK){
+//                        FaceDetectActivity.openPage((BaseActicity) getActivity(),mTakePicPath);
+//                    }else{
+//                        T.toastShortWithResId(mContext,R.string.not_take_picture);
+//                    }
                     if(resultCode==BaseActicity.RESULT_OK){
-                        FaceDetectActivity.openPage((BaseActicity) getActivity(),mTakePicPath);
+                        File imgFile = new File(mTakePicPath);
+                        Uri uri = Uri.fromFile(imgFile);
+                        beginCrop(uri);
                     }else{
-                        T.toastShortWithResId(mContext,R.string.not_take_picture);
+                        T.toastShortWithResId(mContext,R.string.not_select_picture);
                     }
                     break;
                 case AppDefine.CODE_REQUEST_GALLERY:

@@ -17,7 +17,10 @@ public class BasePostParameters extends PostParameters {
         Delete_Person_All_Face(7),
         Add_Person_Face(8),
         Delete_Group(9),
-        Person_Face(10)
+        Person_Face(10),
+        Train_Person(11),
+        Train_Group(12),
+        Face_Match_Group(13)
         ;
 
         private int type;

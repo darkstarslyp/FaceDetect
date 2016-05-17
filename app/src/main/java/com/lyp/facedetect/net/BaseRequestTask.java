@@ -66,6 +66,15 @@ public class BaseRequestTask extends AsyncTask<BasePostParameters,Void,JSONObjec
                 case Person_Face:
                     object = mBaseHttpRequest.personGetInfo(postParameters);
                     break;
+                case Train_Person:
+                    object = mBaseHttpRequest.trainVerify(postParameters);
+                    break;
+                case Train_Group:
+                    object = mBaseHttpRequest.trainIdentify(postParameters);
+                    break;
+                case Face_Match_Group:
+                    object = mBaseHttpRequest.recognitionIdentify(postParameters);
+                    break;
                 default:
                     break;
             }
