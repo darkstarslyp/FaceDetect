@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/normal_button_bg"
+    android:paddingBottom="10dp"
+    >
+    <TextView
+        android:id="@+id/student_id_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student_id"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/student_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/student_id_tip"
+        android:layout_toRightOf="@+id/student_id_tip"
+        android:layout_toEndOf="@+id/student_id_tip" />
+    <TextView
+        android:id="@+id/student_tag_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student_name"
+        android:layout_below="@+id/student_id_tip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/student_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/student_tag_tip"
+        android:layout_alignLeft="@+id/student_id"
+        android:layout_alignStart="@+id/student_id" />
+
+    <TextView
+        android:id="@+id/confidence_tip"
+        android:text="@string/confidence_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/student_tag"
+        android:layout_toRightOf="@+id/student_id"
+        android:layout_toEndOf="@+id/student_id"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp" />
+    <TextView
+        android:id="@+id/confidence"
+        android:text=""
+        android:textColor="@color/app_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/confidence_tip"
+        android:layout_toRightOf="@+id/confidence_tip"
+        android:layout_toEndOf="@+id/confidence_tip" />
+</RelativeLayout>

@@ -15,8 +15,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.facepp.error.FaceppParseException;
-import com.facepp.http.PostParameters;
 import com.lyp.facedetect.R;
 import com.lyp.facedetect.facemodel.FaceInfoArray;
 import com.lyp.facedetect.facemodel.JSONObjectParse;
@@ -146,18 +144,19 @@ public class FaceDetectActivity extends BaseActicity {
                 FaceInfoArray faceInfoArray = JSONObjectParse.getImageFaceInfoArray(result);
                 if(faceInfoArray!=null&&faceInfoArray.face!=null&&faceInfoArray.face.length>0){
                     Log.d("face num =",faceInfoArray.face.length+"");
-
+                    FaceMatchActivity.openPage(FaceDetectActivity.this,faceInfoArray);
+//                    FaceDetectActivity.this.finish();
                 }else{
                     T.toastShortWithResId(FaceDetectActivity.this,R.string.not_detect_face);
+                    FaceDetectActivity.this.finish();
                 }
             }
 
             @Override
             public void failed() {
-
                 mProgressBar.setVisibility(View.INVISIBLE);
                 T.toastShortWithResId(FaceDetectActivity.this,R.string.image_size_to_big);
-
+                FaceDetectActivity.this.finish();
             }
 
         });

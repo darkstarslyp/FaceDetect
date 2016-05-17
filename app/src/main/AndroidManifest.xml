@@ -42,8 +42,13 @@
 
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
 
+
         <activity android:name=".ui.activity.AddFaceToStudentActivity"
                 android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".ui.activity.FaceMatchActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

@@ -56,4 +56,19 @@ public class JSONObjectParse {
         }
         return faceInfoArray;
     }
+
+
+    public static MatchFaceInfo getMatchFaceInfo(JSONObject jsonObject){
+        MatchFaceInfo matchFaceInfo = null;
+        String dataObject = jsonObject.toString();
+        try {
+            dataObject  = jsonObject.toString();
+            Gson gson = new Gson();
+            matchFaceInfo = gson.fromJson(dataObject,MatchFaceInfo.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return  matchFaceInfo;
+    }
 }

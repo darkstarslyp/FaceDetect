@@ -3,7 +3,6 @@ package com.lyp.facedetect.net;
 import android.os.AsyncTask;
 
 import com.facepp.error.FaceppParseException;
-import com.lyp.facedetect.common.BaseHttpRequest;
 
 import org.json.JSONObject;
 

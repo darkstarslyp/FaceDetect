@@ -54,4 +54,9 @@
     <string name="train_student_success">Train Student Success</string>
     <string name="not_detect_face">未检测到人脸信息</string>
     <string name="image_size_to_big">照片尺寸过大</string>
+    <string name="have_detect_face_num_tip">已识别人脸数量:</string>
+    <string name="start_to_match">开始匹配</string>
+    <string name="input_class_id">输入班级编号</string>
+    <string name="person_face_match">人脸匹配</string>
+    <string name="confidence_tip">可信度：</string>
 </resources>
